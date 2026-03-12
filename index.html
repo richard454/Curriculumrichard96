@@ -1,76 +1,152 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Richard Núñez | CV</title>
+<title>Richard Núñez | Portfolio</title>
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
 body{
 font-family: Arial, Helvetica, sans-serif;
 background:#0f172a;
 color:white;
-margin:0;
+line-height:1.6;
 }
+
+/* HEADER */
 
 header{
 text-align:center;
-padding:40px;
-background:#020617;
+padding:70px 20px;
+background:linear-gradient(135deg,#020617,#1e293b);
 }
 
 header h1{
+font-size:40px;
 color:#22d3ee;
-margin-bottom:10px;
 }
+
+header p{
+margin-top:10px;
+color:#cbd5f5;
+}
+
+/* NAV */
 
 nav{
 background:#020617;
-padding:10px;
-text-align:center;
+padding:15px;
+position:sticky;
+top:0;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+justify-content:center;
+}
+
+nav li{
+margin:0 15px;
 }
 
 nav a{
 color:white;
-margin:0 15px;
 text-decoration:none;
 font-weight:bold;
+transition:0.3s;
 }
+
+nav a:hover{
+color:#22d3ee;
+}
+
+/* SECTIONS */
 
 section{
 max-width:900px;
 margin:auto;
-padding:50px 20px;
+padding:60px 20px;
 }
+
+h2{
+color:#22d3ee;
+margin-bottom:20px;
+}
+
+/* CARDS */
 
 .card{
 background:#1e293b;
 padding:30px;
 border-radius:10px;
 margin-bottom:30px;
+transition:0.3s;
 }
 
-h2{
-color:#22d3ee;
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 20px rgba(0,0,0,0.5);
 }
+
+/* PROJECTS */
+
+.project{
+margin-bottom:25px;
+}
+
+.project a{
+color:#38bdf8;
+text-decoration:none;
+}
+
+/* BUTTON */
 
 button{
-padding:10px 20px;
+padding:12px 25px;
 background:#22d3ee;
 border:none;
-border-radius:5px;
+border-radius:6px;
 cursor:pointer;
+font-weight:bold;
+transition:0.3s;
 }
+
+button:hover{
+background:#06b6d4;
+}
+
+/* FOOTER */
 
 footer{
 text-align:center;
 padding:30px;
 background:#020617;
+margin-top:40px;
+}
+
+/* BACK TO TOP */
+
+#topBtn{
+position:fixed;
+bottom:20px;
+right:20px;
+display:none;
+padding:10px 15px;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -79,18 +155,18 @@ background:#020617;
 
 <h1>Richard Núñez</h1>
 
-<p>Estudiante de Desarrollo de Software y Programación</p>
-
-<p>Paraguay</p>
+<p>Estudiante de Desarrollo de Software</p>
+<p>En formación como Backend Developer</p>
 
 </header>
 
 <nav>
 
-<a href="#sobre">Sobre mí</a>
-<a href="#habilidades">Habilidades</a>
-<a href="#proyectos">Proyectos</a>
-<a href="#contacto">Contacto</a>
+<ul>
+<li><a href="#sobre">Sobre mí</a></li>
+<li><a href="#proyectos">Proyectos</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
 
 </nav>
 
@@ -101,34 +177,19 @@ background:#020617;
 <h2>Sobre mí</h2>
 
 <p>
-Soy estudiante de desarrollo de software con interés en programación,
-desarrollo web y sistemas informáticos.
+
+Soy estudiante de desarrollo de software con interés en desarrollo backend
+y sistemas web. Actualmente me encuentro desarrollando proyectos
+para mejorar mis habilidades en programación y creación de aplicaciones.
+
 </p>
 
 <p>
-Actualmente estoy aprendiendo tecnologías de programación y creando proyectos
-personales para mejorar mis habilidades.
+
+También he participado en proyectos colaborativos creando soluciones web
+junto a otros desarrolladores.
+
 </p>
-
-</div>
-
-</section>
-
-<section id="habilidades">
-
-<div class="card">
-
-<h2>Habilidades</h2>
-
-<ul>
-
-<li>HTML</li>
-<li>CSS</li>
-<li>JavaScript básico</li>
-<li>Git y GitHub</li>
-<li>Aprendiendo Java y Backend</li>
-
-</ul>
 
 </div>
 
@@ -140,19 +201,41 @@ personales para mejorar mis habilidades.
 
 <h2>Proyectos</h2>
 
+<div class="project">
+
+<h3>StockControl</h3>
+
+<p>Proyecto desarrollado junto a Elias para presentar un sistema de gestión de inventario.</p>
+
+<a href="https://stockcontrol-landing.vercel.app/?utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank">
+Ver proyecto
+</a>
+
+</div>
+
+<div class="project">
+
+<h3>Sport Primera</h3>
+
+<p>Proyecto web enfocado en presentación de servicios deportivos.</p>
+
+<a href="https://sport-primera.vercel.app/" target="_blank">
+Ver proyecto
+</a>
+
+</div>
+
+<div class="project">
+
 <h3>VulpyShop</h3>
 
-<p>
-Proyecto de tienda online enfocado en productos de tecnología y gaming.
-Creado como práctica de desarrollo web.
-</p>
+<p>Proyecto de tienda online desarrollado como práctica.</p>
 
-<h3>DiGuork</h3>
+<a href="https://github.com/richard454/vulpyShop.git" target="_blank">
+Ver repositorio
+</a>
 
-<p>
-Proyecto realizado junto a mi colega Elias.
-Idea de sistema de gestión para negocios con control de inventario y ventas.
-</p>
+</div>
 
 </div>
 
@@ -164,16 +247,14 @@ Idea de sistema de gestión para negocios con control de inventario y ventas.
 
 <h2>Contacto</h2>
 
-<p>Email: richard.nunez.py@gmail.com</p>
+<p>Email: 2196@gmail.com</p>
 
 <p>GitHub: github.com/richard454</p>
 
 <p>Teléfono: 0982 590 285</p>
 
 <a href="https://wa.me/595982590285">
-
 <button>Contactar por WhatsApp</button>
-
 </a>
 
 </div>
@@ -186,5 +267,41 @@ Idea de sistema de gestión para negocios con control de inventario y ventas.
 
 </footer>
 
+<button id="topBtn">↑</button>
+
+<script>
+
+/* SCROLL SUAVE */
+
+document.querySelectorAll('nav a').forEach(link=>{
+link.addEventListener('click',function(e){
+e.preventDefault()
+
+document.querySelector(this.getAttribute('href'))
+.scrollIntoView({behavior:'smooth'})
+})
+})
+
+/* BOTON VOLVER ARRIBA */
+
+const topBtn=document.getElementById("topBtn")
+
+window.onscroll=function(){
+
+if(document.body.scrollTop>200 || document.documentElement.scrollTop>200){
+topBtn.style.display="block"
+}else{
+topBtn.style.display="none"
+}
+
+}
+
+topBtn.onclick=function(){
+window.scrollTo({top:0,behavior:'smooth'})
+}
+
+</script>
+
 </body>
+
 </html>
